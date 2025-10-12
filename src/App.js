@@ -65,11 +65,10 @@ function App() {
               <a href="#optical-quality">OPTICAL QUALITY - LENS</a>
             </div>
           </div>
-          <a href="#search" className="search-icon">🔍</a>
         </nav>
       </header>
       
-      <img src="/logo.png" alt="Logo" className="logo" />
+      <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Logo" className="logo" />
       <main className="main">
         <div className="carousel">
           <button className="nav-btn left" onClick={() => setCurrentImage(currentImage === 0 ? images.length - 1 : currentImage - 1)}>‹</button>
