@@ -19,34 +19,31 @@ function App() {
       description: 'The vast expanse of the universe beyond our solar system'
     },
     {
-      url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=600&fit=crop',
-      title: 'Cosmic Wonder',
-      description: 'Beautiful celestial formations in the night sky'
-    },
-    {
       url: 'https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?w=1200&h=600&fit=crop',
       title: 'Centaurus A',
       description: 'A prominent galaxy with a supermassive black hole at its center'
     },
     {
-      url: 'https://images.unsplash.com/photo-1543722530-d2c3201371e7?w=1200&h=600&fit=crop',
+      url: 'https://images.squarespace-cdn.com/content/v1/57e97e6ab8a79be1e7ae0ae6/8611229d-03cb-4276-9d26-9dabefd69cdf/FlamingStar+Final+HansonVCropLRGBHAsmall.jpg?format=2500w',
       title: 'Flaming Star Nebula',
       description: 'A bright emission nebula surrounded by dark dust clouds'
     },
     {
-      url: 'https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=1200&h=600&fit=crop',
-      title: 'Crab Nebula',
-      description: 'A supernova remnant and pulsar wind nebula in the constellation Taurus'
+      url: 'https://i.redd.it/ep815u7cdsp81.png',
+      title: 'Dragons of Ara',
+      description: 'A stunning nebula complex in the constellation Ara'
     }
   ];
   const [currentImage, setCurrentImage] = useState(0);
 
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentImage(prev => prev === images.length - 1 ? 0 : prev + 1);
-    }, 10000);
+    }, 30000);
     return () => clearInterval(timer);
   }, [images.length]);
+  
   return (
     <div className="app">
       <header className="header">
@@ -59,8 +56,16 @@ function App() {
               <a href="#mounts">MOUNTS</a>
             </div>
           </div>
+          <a href="#stock-preowned">STOCK AND PRE-OWNED</a>
           <a href="#gallery">GALLERY</a>
-          <a href="#about">ABOUT OUR OPTICS</a>
+          <div className="dropdown">
+            <a href="#about">ABOUT OUR OPTICS</a>
+            <div className="dropdown-content">
+              <a href="#optical-design">OPTICAL DESIGN</a>
+              <a href="#optical-quality">OPTICAL QUALITY - LENS</a>
+            </div>
+          </div>
+          <a href="#search" className="search-icon">🔍</a>
         </nav>
       </header>
       
@@ -74,6 +79,40 @@ function App() {
             <p>{images[currentImage].description}</p>
           </div>
           <button className="nav-btn right" onClick={() => setCurrentImage(currentImage === images.length - 1 ? 0 : currentImage + 1)}>›</button>
+
+        </div>
+        
+        <div className="cards-grid">
+              <div className="card" style={{backgroundImage: 'url(https://www.cfftelescopes.com/img/product-type1.jpg)'}}>
+                <h3>Refractor Telescopes</h3>
+                <p>High-quality refractor telescopes for crisp, clear views</p>
+                <button>Discover Products</button>
+              </div>
+              <div className="card" style={{backgroundImage: 'url(https://www.cfftelescopes.com/img/product-type2.jpg)'}}>
+                <h3>Reflector Telescopes</h3>
+                <p>Powerful reflector telescopes for deep space observation</p>
+                <button>Learn More</button>
+              </div>
+              <div className="card" style={{backgroundImage: 'url(https://www.cfftelescopes.com/img/product-type3.jpg)'}}>
+                <h3>Stock and Pre-owned</h3>
+                <p>Quality used telescopes and equipment at great prices</p>
+                <button>Learn More</button>
+              </div>
+              <div className="card" style={{backgroundImage: 'url(https://www.cfftelescopes.com/img/mount2.jpg)'}}>
+                <h3>Telescope Mounts</h3>
+                <p>Stable and precise mounts for your telescope setup</p>
+                <button>Learn More</button>
+              </div>
+              <div className="card" style={{backgroundImage: 'url(https://www.cfftelescopes.com/img/services1.jpg)'}}>
+                <h3>Services</h3>
+                <p>Professional telescope services and support</p>
+                <button>Learn More</button>
+              </div>
+              <div className="card" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=400&h=400&fit=crop)'}}>
+                <h3>Accessories</h3>
+                <p>Essential accessories to complete your setup</p>
+                <button>Learn More</button>
+              </div>
         </div>
         <div className="sections">
           <section className="updates">
