@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/telescope/static/css/main.f4c13174.css",
+    "main.js": "/telescope/static/js/main.619513a5.js",
+    "index.html": "/telescope/index.html",
+    "main.f4c13174.css.map": "/telescope/static/css/main.f4c13174.css.map",
+    "main.619513a5.js.map": "/telescope/static/js/main.619513a5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f4c13174.css",
+    "static/js/main.619513a5.js"
+  ]
+}
