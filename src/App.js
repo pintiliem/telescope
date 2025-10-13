@@ -35,6 +35,7 @@ function App() {
     }
   ];
   const [currentImage, setCurrentImage] = useState(0);
+  const [showSearch, setShowSearch] = useState(false);
 
 
   useEffect(() => {
@@ -64,6 +65,10 @@ function App() {
               <a href="#optical-design">OPTICAL DESIGN</a>
               <a href="#optical-quality">OPTICAL QUALITY - LENS</a>
             </div>
+          </div>
+          <div className="search-container">
+            {showSearch && <input type="text" className="search-field" placeholder="Search..." />}
+            <img src={`${process.env.PUBLIC_URL}/search.png`} alt="Search" className="search-icon" onClick={() => setShowSearch(!showSearch)} />
           </div>
         </nav>
       </header>
@@ -107,9 +112,9 @@ function App() {
                 <p>Professional telescope services and support</p>
                 <button>Learn More</button>
               </div>
-              <div className="card" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=400&h=400&fit=crop)'}}>
-                <h3>Accessories</h3>
-                <p>Essential accessories to complete your setup</p>
+              <div className="card gallery-card" style={{backgroundImage: 'url(https://www.cfftelescopes.com/img/gallery2.jpg)'}}>
+                <h3>Gallery</h3>
+                <p>Explore our collection of stunning astronomical images</p>
                 <button>Learn More</button>
               </div>
         </div>
