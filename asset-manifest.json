@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/telescope/static/css/main.3fa0f024.css",
+    "main.css": "/telescope/static/css/main.6af3b0cb.css",
     "main.js": "/telescope/static/js/main.3620376d.js",
     "index.html": "/telescope/index.html",
-    "main.3fa0f024.css.map": "/telescope/static/css/main.3fa0f024.css.map",
+    "main.6af3b0cb.css.map": "/telescope/static/css/main.6af3b0cb.css.map",
     "main.3620376d.js.map": "/telescope/static/js/main.3620376d.js.map"
   },
   "entrypoints": [
-    "static/css/main.3fa0f024.css",
+    "static/css/main.6af3b0cb.css",
     "static/js/main.3620376d.js"
   ]
 }
