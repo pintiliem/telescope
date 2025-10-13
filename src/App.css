@@ -436,4 +436,8 @@ body {
     gap: 0.5rem;
     text-align: center;
   }
+  
+  * {
+    font-family: Helvetica, Arial, sans-serif !important;
+  }
 }
