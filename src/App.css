@@ -185,8 +185,7 @@ body {
 
 .nav-btn {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 10px;
   background: rgba(0,0,0,0.2);
   color: rgba(255,255,255,0.6);
   font-size: 2rem;
@@ -205,8 +204,9 @@ body {
 
 .image-info {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
   color: white;
   font-family: 'Trebuchet MS', cursive;
   font-weight: normal;
@@ -232,7 +232,9 @@ body {
   gap: 1rem;
   padding: 2rem;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: -100px auto 0;
+  position: relative;
+  z-index: 5;
 }
 
 .card {
