@@ -419,6 +419,11 @@ body {
     padding: 1rem;
   }
   
+  .nav a {
+    font-family: 'Trebuchet MS', cursive;
+    font-weight: bold;
+  }
+  
   .nav-open {
     display: flex;
   }
