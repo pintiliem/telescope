@@ -36,6 +36,7 @@ function App() {
   ];
   const [currentImage, setCurrentImage] = useState(0);
   const [showSearch, setShowSearch] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
 
 
   useEffect(() => {
@@ -48,7 +49,12 @@ function App() {
   return (
     <div className="app">
       <header className="header">
-        <nav className="nav">
+        <div className="hamburger" onClick={() => setShowMobileMenu(!showMobileMenu)}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav className={`nav ${showMobileMenu ? 'nav-open' : ''}`}>
           <a href="#home">HOME</a>
           <div className="dropdown">
             <a href="#products">PRODUCTS</a>

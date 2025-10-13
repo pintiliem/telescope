@@ -114,6 +114,10 @@ body {
   cursor: pointer;
 }
 
+.hamburger {
+  display: none;
+}
+
 .search-field {
   margin-left: 0.5rem;
   margin-right: 0.25rem;
@@ -378,4 +382,51 @@ body {
 .coming-soon p {
   font-size: 1.1rem;
   color: #666;
+}
+
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+  
+  .sections {
+    flex-direction: column;
+  }
+  
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s;
+  }
+  
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .nav-open {
+    display: flex;
+  }
+  
+  .footer-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    text-align: center;
+  }
 }
